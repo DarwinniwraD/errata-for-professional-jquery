@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  // This is a primary presentation for a jQuery UI widgts,  also for Code snippet of ui-button-icon(pp.159).
+  <meta charset="UTF-8">
+  <title>jQuery UI-Button</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+      $("#btn").button({
+        text : true,
+        label : 'Press!',
+        icons : {
+          primary : 'ui-icon-alert',
+          seconary : 'ui-icon-lightbulb'
+        }
+      });
+  });
+
+  </script>
+</head>
+<body>
+    <div id="btn">
+    </div>       
+</body>
+</html>
