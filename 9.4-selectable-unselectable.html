@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  // This is a snippest code for the function selectable() and unselectable, but there is some other problem that you can't select it directly, but you can select it by moving the mouse over it. So you need to use another javascript.
+  <title>Graggable and undraggable</title>
+  <script src="jquery-1.12.2.js"></script>
+  <script src="jquery-ui.min.js"></script>
+  <meta http-equiv="Content-Type" content="text/html"; charset="utf-8">
+  <link rel="stylesheet" href="jquery-ui-1.11.4/jquery-ui.min.css">
+  <style type="text/css">
+        #selectable div{
+          width: 150px;
+          height: 30px;
+          padding: 10px;
+          margin: 10px;
+          border: 1px solid;
+        }
+        #selectable div.ui-selecting {
+          background: blue;
+          color: white;
+        }
+        #selectable div.ui-selected {
+          background: lightblue;
+
+        }
+        div.unselectable {
+          -moz-user-select: -moz-none;
+          -khtml-user-select: none;
+          -webkit-user-select: none;
+          -o-user-select: none;
+          user-select: none;
+        }
+  </style>
+
+  <script type="text/javascript">
+  $(function() {
+      $("#selectable").selectable({
+        cancel: "div.unselectable"
+      });
+  });
+  </script>
+
+</head>
+<body>
+    <div id="selectable">
+      <div class="ui-widget-content unselectable">Item 1</div>
+      <div class="ui-widget-content">Item 2</div>
+      <div class="ui-widget-content">Item 3</div>
+      <div class="ui-widget-content">Item 4</div>
+      <div class="ui-widget-content">Item 5</div>
+      <div class="ui-widget-content">Item 6</div>
+      <div class="ui-widget-content">Item 7</div>
+    </div>
+</body>
+</html>
